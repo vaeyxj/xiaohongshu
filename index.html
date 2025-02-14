@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card h2 {
+            color: #34495e;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card .preview {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的博客导航</h1>
+        </header>
+
+        <div class="blog-cards">
+
+            <div class="blog-card">
+                <h2>2025自我进化指南</h2>
+                <div class="date">2025-02-14</div>
+                <div class="preview">预览：2025自我进化指南</div>
+                <a href="blogs/2025自我进化指南.html" style="color: #3498db; text-decoration: none;">阅读更多 →</a>
+            </div>
+
+            <div class="blog-card">
+                <h2>焦虑的本质是什么</h2>
+                <div class="date">2025-02-14</div>
+                <div class="preview">预览：焦虑的本质是什么</div>
+                <a href="blogs/焦虑的本质是什么.html" style="color: #3498db; text-decoration: none;">阅读更多 →</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

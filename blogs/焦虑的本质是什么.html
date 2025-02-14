@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焦虑解码手册</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .screen {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e3e9ff 100%);
+        }
+
+        .progress {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(100,100,200,0.3);
+        }
+
+        /* 封面样式 */
+        .cover {
+            background: linear-gradient(135deg, #6b7de9 0%, #8fd3f4 100%);
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* 分屏背景色递进 */
+        .screen:nth-child(2) { background: #f4f7ff }
+        .screen:nth-child(3) { background: #eef2ff }
+        .screen:nth-child(4) { background: #e8edff }
+        .screen:nth-child(5) { background: #e2e8ff }
+        .screen:nth-child(6) { background: #dce3ff }
+
+        .icon {
+            font-size: 42px;
+            color: #5c6ac4;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 38px; line-height: 1.2 }
+        h2 { font-size: 28px; margin-bottom: 15px }
+        .subtitle { font-size: 22px; opacity: 0.9 }
+        ul { list-style: none; padding-left: 20px }
+        li { margin: 15px 0; line-height: 1.6 }
+        .book { color: #3b48ee; font-weight: 500 }
+        .movie { color: #ee3b5d; font-weight: 500 }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 封面 -->
+        <div class="screen cover">
+            <h1>焦虑解码手册</h1>
+            <p class="subtitle">10把钥匙解锁现代人的精神困局</p>
+            <i class="icon fas fa-unlock"></i>
+            <p style="margin-top: auto">向右滑动开启认知之旅 →</p>
+        </div>
+
+        <!-- 分屏内容 -->
+        <div class="screen">
+            <i class="icon fas fa-question"></i>
+            <h2>不确定性依赖</h2>
+            <ul>
+                <li>行动指南：建立"风险分级"机制，区分真实威胁与想象威胁</li>
+                <li>推荐组合：<br>
+                    <span class="book">《当下的力量》</span><br>
+                    <span class="movie">《荒野生存》(Into the Wild)</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="screen">
+            <i class="icon fas fa-hand-holding"></i>
+            <h2>控制欲反噬</h2>
+            <ul>
+                <li>行动指南：每天预留1小时"失控时间"，培养容错能力</li>
+                <li>推荐组合：<br>
+                    <span class="book">《臣服实验》</span><br>
+                    <span class="movie">《少年派的奇幻漂流》</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="screen">
+            <i class="icon fas fa-brain"></i>
+            <h2>认知过载</h2>
+            <ul>
+                <li>行动指南：建立信息"营养金字塔"，区分知识摄入层次</li>
+                <li>推荐组合：<br>
+                    <span class="book">《倦怠社会》</span><br>
+                    <span class="movie">《黑镜》S3E1</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="screen">
+            <i class="icon fas fa-dna"></i>
+            <h2>进化时差</h2>
+            <ul>
+                <li>行动指南：通过原始运动（攀爬/投掷）重建身心连接</li>
+                <li>推荐组合：<br>
+                    <span class="book">《贪婪的多巴胺》</span><br>
+                    <span class="movie">《人类进化史诗》</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <script>
+        // 进度指示器动态更新
+        const container = document.querySelector('.container');
+        const dots = document.querySelectorAll('.dot');
+
+        container.addEventListener('scroll', () => {
+            const screenIndex = Math.round(container.scrollLeft / window.innerWidth);
+            dots.forEach((dot, index) => {
+                dot.style.background = index === screenIndex ? '#5c6ac4' : 'rgba(100,100,200,0.3)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            :root {
+                --screen-width: 390px;
+                --screen-height: 844px;
+            }
+            body {
+                margin: 0;
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+            }
+            .screen {
+                scroll-snap-align: start;
+                min-width: var(--screen-width);
+                height: var(--screen-height);
+                padding: 30px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                position: relative;
+            }
+            .progress {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: rgba(255, 255, 255, 0.8);
+                padding: 5px 12px;
+                border-radius: 20px;
+                font-family: Arial;
+                font-size: 14px;
+                color: #666;
+            }
+            .icon {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto;
+            }
+            /* 封面样式 */
+            .cover {
+                background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+                text-align: center;
+                justify-content: center;
+            }
+            .cover h1 {
+                font-size: 32px;
+                color: #2e7d32;
+                margin: 0;
+            }
+            .cover p {
+                color: #43a047;
+                font-size: 18px;
+            }
+            /* 分屏背景色 */
+            .screen:nth-child(2) {
+                background: #f0f4c3;
+            }
+            .screen:nth-child(3) {
+                background: #c5e1a5;
+            }
+            .screen:nth-child(4) {
+                background: #a5d6a7;
+            }
+            .screen:nth-child(5) {
+                background: #81c784;
+            }
+            .screen:nth-child(6) {
+                background: #66bb6a;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 封面 -->
+        <div class="screen cover">
+            <h1>2025自我进化指南</h1>
+            <p>5个维度打造未来竞争力</p>
+            <div class="progress">1/5</div>
+        </div>
+
+        <!-- 分屏1 -->
+        <div class="screen">
+            <div class="progress">2/5</div>
+            <img
+                src="https://img.icons8.com/ios/100/brain--v1.png"
+                class="icon"
+            />
+            <h2>认知升级</h2>
+            <p>
+                📌行动指南：<br />- 每周深度阅读8小时<br />-
+                建立思维模型卡片库<br />- 参与跨领域研讨会
+            </p>
+            <p>
+                📚推荐组合：<br />《思考，快与慢》（丹尼尔·卡尼曼）<br />《模型思维》<br />🎬《习惯的奴隶》纪录片
+            </p>
+        </div>
+
+        <!-- 分屏2 -->
+        <div class="screen">
+            <div class="progress">3/5</div>
+            <img
+                src="https://img.icons8.com/ios/100/dumbbell.png"
+                class="icon"
+            />
+            <h2>身体革命</h2>
+            <p>
+                📌行动指南：<br />- 每周3次HIIT训练<br />- 实践168饮食法<br />-
+                建立睡眠质量监测
+            </p>
+            <p>
+                📚推荐组合：<br />《原子习惯》<br />《我们为什么要睡觉》<br />🎬《徒手攀岩》
+            </p>
+        </div>
+
+        <!-- 分屏3 -->
+        <div class="screen">
+            <div class="progress">4/5</div>
+            <img
+                src="https://img.icons8.com/ios/100/dna-helix.png"
+                class="icon"
+            />
+            <h2>技能重塑</h2>
+            <p>
+                📌行动指南：<br />- 掌握AI协作工具链<br />- 开发第二职业曲线<br />-
+                季度技能树更新
+            </p>
+            <p>
+                📚推荐组合：<br />《终身学习》<br />《深度学习》<br />🎬《解码比尔·盖茨》
+            </p>
+        </div>
+
+        <!-- 分屏4 -->
+        <div class="screen">
+            <div class="progress">5/5</div>
+            <img
+                src="https://img.icons8.com/ios/100/heart-with-pulse.png"
+                class="icon"
+            />
+            <h2>情绪进化</h2>
+            <p>
+                📌行动指南：<br />- 正念冥想日记<br />- 建立情绪能量账户<br />-
+                社会关系断舍离
+            </p>
+            <p>
+                📚推荐组合：<br />《情绪解码》<br />《心流》<br />🎬《内在探索》
+            </p>
+        </div>
+    </body>
+</html>
+
