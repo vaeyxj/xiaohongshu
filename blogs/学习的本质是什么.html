@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+  --screen-width: 390px;
+  --screen-height: 844px;
+}
+body {
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: #f8f9fa;
+}
+.screen {
+  scroll-snap-align: start;
+  min-width: var(--screen-width);
+  height: var(--screen-height);
+  padding: 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  border-right: 10px solid white;
+}
+.progress {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.9);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-family: system-ui;
+  font-size: 14px;
+  color: #2d3748;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.icon {
+  width: 65px;
+  height: 65px;
+  margin: 10px auto;
+}
+.example {
+  background: rgba(255,255,255,0.95);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 8px 0;
+  border-left: 4px solid #4f46e5;
+}
+.tip {
+  background: #eef2ff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #4338ca;
+}
+
+/* 封面样式 */
+.cover {
+  background: linear-gradient(135deg, #6366f1, #4338ca);
+  text-align: center;
+  justify-content: center;
+}
+.cover h1 {
+  font-size: 36px;
+  color: white;
+  margin: 0 0 12px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.cover p {
+  color: #e0e7ff;
+  font-size: 18px;
+  padding: 0 25px;
+}
+
+/* 分屏背景色 */
+.screen:nth-child(2) { background: #e0e7ff; }
+.screen:nth-child(3) { background: #c7d2fe; }
+.screen:nth-child(4) { background: #a5b4fc; }
+.screen:nth-child(5) { background: #818cf8; }
+.screen:nth-child(6) { background: #6366f1; }
+.screen:nth-child(7) { background: #4f46e5; }
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<div class="screen cover">
+  <h1>学习本质解密</h1>
+  <p>6个维度构建终身学习系统</p>
+  <div class="progress">1/6</div>
+</div>
+
+<!-- 分屏1 -->
+<div class="screen">
+  <div class="progress">2/6</div>
+  <img src="https://img.icons8.com/ios/100/brain-circuit.png" class="icon">
+  <h2>神经可塑性</h2>
+  <div class="example">💡 就像学骑自行车时大脑不断优化神经连接，最终形成肌肉记忆</div>
+  <p>📌行动指南：<br>- 间隔重复法（每24/72小时复习）<br>- 多感官协同学习</p>
+  <div class="tip">🔍 神经可塑性：大脑根据经验重组神经网络的能力</div>
+  <p>📚推荐组合：<br>《学习之道》<br>🎬《超脱》</p>
+</div>
+
+<!-- 分屏2 -->
+<div class="screen">
+  <div class="progress">3/6</div>
+  <img src="https://img.icons8.com/ios/100/construction.png" class="icon">
+  <h2>知识建构</h2>
+  <div class="example">💡 像搭乐高：新知识必须与原有认知框架建立连接才稳固</div>
+  <p>📌行动指南：<br>- 费曼技巧教学法<br>- 建立概念关系图谱</p>
+  <p>📚推荐组合：<br>《认知天性》<br>🎬《模仿游戏》</p>
+</div>
+
+<!-- 分屏3 -->
+<div class="screen">
+  <div class="progress">4/6</div>
+  <img src="https://img.icons8.com/ios/100/feedback.png" class="icon">
+  <h2>反馈闭环</h2>
+  <div class="example">💡 就像健身需要看到肌肉变化，学习需要及时效果验证</div>
+  <p>📌行动指南：<br>- 建立错题进化手册<br>- 每周进行知识压力测试</p>
+  <div class="tip">🔍 最佳学习区：85%熟悉内容+15%新挑战</div>
+  <p>📚推荐组合：<br>《刻意练习》<br>🎬《万物理论》</p>
+</div>
+
+<!-- 分屏4 -->
+<div class="screen">
+  <div class="progress">5/6</div>
+  <img src="https://img.icons8.com/ios/100/thinking.png" class="icon">
+  <h2>元认知监控</h2>
+  <div class="example">💡 像汽车仪表盘，实时监控「理解度」和「注意力油量」</div>
+  <p>📌行动指南：<br>- 学习日志记录思维过程<br>- 使用SQ3R阅读法</p>
+  <div class="tip">🔍 SQ3R：Survey→Question→Read→Recite→Review</div>
+  <p>📚推荐组合：<br>《如何学习》<br>🎬《心灵捕手》</p>
+</div>
+
+<!-- 分屏5 -->
+<div class="screen">
+  <div class="progress">6/6</div>
+  <img src="https://img.icons8.com/ios/100/electrical.png" class="icon">
+  <h2>情绪驱动</h2>
+  <div class="example">💡 多巴胺奖励机制：完成小目标立即给自己正向反馈</div>
+  <p>📌行动指南：<br>- 建立成就徽章系统<br>- 交叉进行认知型/机械型学习</p>
+  <p>📚推荐组合：<br>《内在动机》<br>🎬《三傻大闹宝莱坞》</p>
+  <div class="tip">🎯 小贴士：用「记忆宫殿」法记复杂概念</div>
+</div>
+
+</body>
+</html>
