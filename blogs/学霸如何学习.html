@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+  --screen-width: 390px;
+  --screen-height: 844px;
+}
+body {
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: #e8f5e9;
+}
+.screen {
+  scroll-snap-align: start;
+  min-width: var(--screen-width);
+  height: var(--screen-height);
+  padding: 28px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  position: relative;
+  border-right: 12px solid #fff;
+}
+.progress {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.9);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-family: system-ui;
+  font-size: 14px;
+  color: #2e7d32;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card {
+  background: rgba(255,255,255,0.97);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: grid;
+  gap: 15px;
+}
+.icon-container {
+  width: 80px;
+  height: 80px;
+  background: #c8e6c9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+}
+.annotation {
+  padding: 12px;
+  background: #f1f8e9;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* 封面样式 */
+.cover {
+  background: linear-gradient(135deg, #81c784, #4caf50);
+  text-align: center;
+  padding-top: 140px;
+}
+.cover h1 {
+  font-size: 38px;
+  color: white;
+  margin: 0 0 15px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+.cover p {
+  color: #e8f5e9;
+  font-size: 18px;
+  padding: 0 30px;
+}
+
+/* 分屏背景色 */
+.screen:nth-child(2) { background: #f1f8e9; }
+.screen:nth-child(3) { background: #dcedc8; }
+.screen:nth-child(4) { background: #c8e6c9; }
+.screen:nth-child(5) { background: #a5d6a7; }
+.screen:nth-child(6) { background: #81c784; }
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<div class="screen cover">
+  <h1>学霸模式全解</h1>
+  <p>5大认知引擎驱动高效学习系统</p>
+  <div class="progress">1/5</div>
+</div>
+
+<!-- 分屏1 -->
+<div class="screen">
+  <div class="progress">2/5</div>
+  <div class="card">
+    <div class="icon-container">
+      <img src="https://img.icons8.com/ios-filled/100/brain.png" class="icon">
+    </div>
+    <h2>间隔重复</h2>
+    <div class="annotation">💡 就像定期给花园除草，在遗忘临界点强化记忆</div>
+    <p>🔍 本质：对抗遗忘曲线（艾宾浩斯记忆原理）<br>
+    <small>间隔效应：最佳复习周期为1/7/30天</small></p>
+    <div class="annotation">📚《认知天性》ISBN 9787111613131<br>
+    🎬《模仿游戏》IMDb: tt2084970<br>
+    💡 工具：Anki记忆卡片+日历提醒系统</div>
+  </div>
+</div>
+
+<!-- 分屏2 -->
+<div class="screen">
+  <div class="progress">3/5</div>
+  <div class="card">
+    <div class="icon-container">
+      <img src="https://img.icons8.com/ios-filled/100/hourglass.png" class="icon">
+    </div>
+    <h2>专注熔断</h2>
+    <div class="annotation">💡 像锻造宝剑需要精准控温，保持90分钟深度专注</div>
+    <p>🔍 本质：超日节律管理<br>
+    <small>注意力周期：15/45/90分钟黄金分割法</small></p>
+    <div class="annotation">📚《深度工作》ISBN 9787111565928<br>
+    🎬《社交网络》IMDb: tt1285016<br>
+    💡 技巧：番茄钟变式（25+5）×3 → 30+15</div>
+  </div>
+</div>
+
+<!-- 分屏3 -->
+<div class="screen">
+  <div class="progress">4/5</div>
+  <div class="card">
+    <div class="icon-container">
+      <img src="https://img.icons8.com/ios-filled/100/mind-map.png" class="icon">
+    </div>
+    <h2>认知脚手架</h2>
+    <div class="annotation">💡 像建筑工地的支撑架，构建知识关联网络</div>
+    <p>🔍 本质：图式理论应用<br>
+    <small>知识节点：每个概念应有3个以上连接点</small></p>
+    <div class="annotation">📚《如何高效学习》ISBN 9787115336017<br>
+    🎬《知无涯者》IMDb: tt0787524<br>
+    💡 工具：XMind+Obsidian双向链接</div>
+  </div>
+</div>
+
+<!-- 分屏4 -->
+<div class="screen">
+  <div class="progress">5/5</div>
+  <div class="card">
+    <div class="icon-container">
+      <img src="https://img.icons8.com/ios-filled/100/test-passed.png" class="icon">
+    </div>
+    <h2>检索训练</h2>
+    <div class="annotation">💡 像肌肉需要抗阻训练，主动回想比重复阅读有效3倍</div>
+    <p>🔍 本质：生成效应<br>
+    <small>必要难度理论：适当阻力提升记忆强度</small></p>
+    <div class="annotation">📚《学习之道》ISBN 9787508643465<br>
+    🎬《万物理论》IMDb: tt2980516<br>
+    💡 方法：闭卷自测→错题溯源→间隔复测</div>
+  </div>
+</div>
+
+</body>
+</html>
