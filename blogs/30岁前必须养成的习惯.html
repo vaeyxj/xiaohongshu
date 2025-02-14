@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30岁前必养成的习惯</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screen {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s;
+        }
+
+        .progress {
+            position: absolute;
+            top: 18px;
+            right: 25px;
+            color: rgba(0,0,0,0.7);
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .icon {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+
+        /* 封面样式 */
+        #cover {
+            background: linear-gradient(160deg, #2196F3, #64B5F6);
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* 渐变色配置 */
+        .screen:nth-child(2) { background: #E3F2FD; }
+        .screen:nth-child(3) { background: #BBDEFB; }
+        .screen:nth-child(4) { background: #90CAF9; }
+        .screen:nth-child(5) { background: #64B5F6; }
+        .screen:nth-child(6) { background: #42A5F5; }
+        .screen:nth-child(7) { background: #2196F3; }
+        .screen:nth-child(8) { background: #1E88E5; }
+    </style>
+</head>
+<body>
+    <!-- 封面分屏 -->
+    <div class="screen" id="cover">
+        <div class="progress">1/7</div>
+        <h1 style="font-size:2.2em">30岁前必养成的习惯</h1>
+        <p style="margin-top:15px;font-size:1.1em">改变人生的7个黄金法则</p>
+        <i class="fas fa-seedling icon" style="margin-top:40px"></i>
+    </div>
+
+    <!-- 分屏1：晨间惯例 -->
+    <div class="screen">
+        <div class="progress">2/7</div>
+        <i class="fas fa-clock icon" style="color:#1E88E5"></i>
+        <div class="content">
+            <h3>1. 晨间惯例</h3>
+            <div style="margin:15px 0;background:#ffffffdd;padding:15px;border-radius:12px">
+                <p>🌅 情景：每天提前1小时起床，却不知道如何有效利用</p>
+                <p>✅ 行动指南：</p>
+                <ul style="padding-left:20px;margin-top:8px">
+                    <li>15分钟冥想（正念呼吸法）</li>
+                    <li>20分钟主题阅读</li>
+                    <li>5分钟目标规划</li>
+                </ul>
+            </div>
+            <div style="margin-top:20px">
+                <p>📚《起床后的黄金1小时》</p>
+                <p>🎬《神奇早晨的奇迹》Ted演讲</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分屏2：财务规划 -->
+    <div class="screen">
+        <div class="progress">3/7</div>
+        <i class="fas fa-coins icon" style="color:#2196F3"></i>
+        <div class="content">
+            <h3>2. 财务规划</h3>
+            <div style="margin:15px 0;background:#ffffffdd;padding:15px;border-radius:12px">
+                <p>💳 案例：月薪1.5万却成月光族</p>
+                <p>✅ 三步法：</p>
+                <ol style="padding-left:20px;margin-top:8px">
+                    <li>50/30/20法则（必要/想要/储蓄）</li>
+                    <li>建立应急基金（3-6个月支出）</li>
+                    <li>定期复盘消费记录</li>
+                </ol>
+            </div>
+            <div style="margin-top:20px">
+                <p>📚《穷爸爸富爸爸》</p>
+                <p>🎬《金钱与我》纪录片</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分屏3：知识管理 -->
+    <div class="screen">
+        <div class="progress">4/7</div>
+        <i class="fas fa-brain icon" style="color:#42A5F5"></i>
+        <div class="content">
+            <h3>3. 知识管理</h3>
+            <div style="margin:15px 0;background:#ffffffdd;padding:15px;border-radius:12px">
+                <p>📝 痛点：收藏百篇干货却从未回顾</p>
+                <p>🚀 构建个人知识库：</p>
+                <ul style="padding-left:20px;margin-top:8px">
+                    <li>使用Flomo碎片记录</li>
+                    <li>每周整理到Notion</li>
+                    <li>每月输出思维导图</li>
+                </ul>
+            </div>
+            <div style="margin-top:20px">
+                <p>📚《卡片笔记写作法》</p>
+                <p>🎬《认知天性》解读视频</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分屏4：健康管理 -->
+    <div class="screen">
+        <div class="progress">5/7</div>
+        <i class="fas fa-heartbeat icon" style="color:#64B5F6"></i>
+        <div class="content">
+            <h3>4. 健康管理</h3>
+            <div style="margin:15px 0;background:#ffffffdd;padding:15px;border-radius:12px">
+                <p>🏋️ 误区：突击健身反而损伤身体</p>
+                <p>⚖️ 科学方案：</p>
+                <ul style="padding-left:20px;margin-top:8px">
+                    <li>每周3次zone2训练（最大心率60-70%）</li>
+                    <li>每天8杯水计算公式：体重(kg)×30ml</li>
+                    <li>睡眠周期管理（1.5小时为周期）</li>
+                </ul>
+            </div>
+            <div style="margin-top:20px">
+                <p>📚《原子习惯》</p>
+                <p>🎬《健身的真相》BBC纪录片</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分屏5：情绪日记 -->
+    <div class="screen">
+        <div class="progress">6/7</div>
+        <i class="fas fa-book-open icon" style="color:#90CAF9"></i>
+        <div class="content">
+            <h3>5. 情绪日记</h3>
+            <div style="margin:15px 0;background:#ffffffdd;padding:15px;border-radius:12px">
+                <p>😤 场景：工作冲突后持续烦躁</p>
+                <p>📓 记录模板：</p>
+                <pre style="background:#f8f9fa;padding:10px;border-radius:8px">
+1. 触发事件：
+2. 身体反应：
+3. 情绪命名：
+4. 认知重构：</pre>
+            </div>
+            <div style="margin-top:20px">
+                <p>📚《伯恩斯新情绪疗法》</p>
+                <p>🎬《头脑特工队》动画电影</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分屏6：人际投资 -->
+    <div class="screen">
+        <div class="progress">7/7</div>
+        <i class="fas fa-handshake icon" style="color:#BBDEFB"></i>
+        <div class="content">
+            <h3>6. 人际投资</h3>
+            <div style="margin:15px 0;background:#ffffffdd;padding:15px;border-radius:12px">
+                <p>👥 黄金人脉法则：</p>
+                <ul style="padding-left:20px;margin-top:8px">
+                    <li>每月深聊1位行业前辈</li>
+                    <li>每周帮助1个同事</li>
+                    <li>每季度清理无效社交</li>
+                </ul>
+            </div>
+            <div style="margin-top:20px">
+                <p>📚《别独自用餐》</p>
+                <p>🎬《在云端》职场社交电影</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
