@@ -112,7 +112,7 @@ def generate_navigation():
 <body>
     <div class="container">
         <header>
-            <h1>我的博客导航</h1>
+            <h1>第25小时自习室</h1>
         </header>
 
         <div class="blog-cards">

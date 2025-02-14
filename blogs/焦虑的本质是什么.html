@@ -2,159 +2,148 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>焦虑解码手册</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>焦虑本质解码手册</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
         }
 
-        .container {
-            display: flex;
+        body {
             overflow-x: auto;
             scroll-snap-type: x mandatory;
+            display: flex;
+            height: 100vh;
         }
 
         .screen {
-            width: 100vw;
+            flex: 0 0 100vw;
             height: 100vh;
+            padding: 20px;
             scroll-snap-align: start;
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            background: linear-gradient(135deg, #f0f4ff 0%, #e3e9ff 100%);
+            transition: background 0.3s;
+            overflow-y: auto;
         }
 
         .progress {
             position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 12px;
+            right: 12px;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
             display: flex;
-            gap: 8px;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(100,100,200,0.3);
-        }
-
-        /* 封面样式 */
-        .cover {
-            background: linear-gradient(135deg, #6b7de9 0%, #8fd3f4 100%);
-            color: white;
-            text-align: center;
+            align-items: center;
             justify-content: center;
+            margin: 20px 0;
         }
 
-        /* 分屏背景色递进 */
-        .screen:nth-child(2) { background: #f4f7ff }
-        .screen:nth-child(3) { background: #eef2ff }
-        .screen:nth-child(4) { background: #e8edff }
-        .screen:nth-child(5) { background: #e2e8ff }
-        .screen:nth-child(6) { background: #dce3ff }
-
-        .icon {
-            font-size: 42px;
-            color: #5c6ac4;
-            margin-bottom: 15px;
+        h1 { font-size: 28px; margin: 15px 0; }
+        h2 { font-size: 18px; color: #666; }
+        h3 { font-size: 20px; margin: 15px 0; }
+        p { line-height: 1.6; margin: 10px 0; }
+        .note {
+            background: rgba(255,255,255,0.9);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
         }
-
-        h1 { font-size: 38px; line-height: 1.2 }
-        h2 { font-size: 28px; margin-bottom: 15px }
-        .subtitle { font-size: 22px; opacity: 0.9 }
-        ul { list-style: none; padding-left: 20px }
-        li { margin: 15px 0; line-height: 1.6 }
-        .book { color: #3b48ee; font-weight: 500 }
-        .movie { color: #ee3b5d; font-weight: 500 }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- 封面 -->
-        <div class="screen cover">
-            <h1>焦虑解码手册</h1>
-            <p class="subtitle">10把钥匙解锁现代人的精神困局</p>
-            <i class="icon fas fa-unlock"></i>
-            <p style="margin-top: auto">向右滑动开启认知之旅 →</p>
+    <!-- 封面屏 -->
+    <div class="screen" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+        <div class="progress">0/6</div>
+        <div class="icon-box" style="background: #ffffff30;">
+            <i class="fas fa-brain fa-2x" style="color: #fff;"></i>
         </div>
-
-        <!-- 分屏内容 -->
-        <div class="screen">
-            <i class="icon fas fa-question"></i>
-            <h2>不确定性依赖</h2>
-            <ul>
-                <li>行动指南：建立"风险分级"机制，区分真实威胁与想象威胁</li>
-                <li>推荐组合：<br>
-                    <span class="book">《当下的力量》</span><br>
-                    <span class="movie">《荒野生存》(Into the Wild)</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="screen">
-            <i class="icon fas fa-hand-holding"></i>
-            <h2>控制欲反噬</h2>
-            <ul>
-                <li>行动指南：每天预留1小时"失控时间"，培养容错能力</li>
-                <li>推荐组合：<br>
-                    <span class="book">《臣服实验》</span><br>
-                    <span class="movie">《少年派的奇幻漂流》</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="screen">
-            <i class="icon fas fa-brain"></i>
-            <h2>认知过载</h2>
-            <ul>
-                <li>行动指南：建立信息"营养金字塔"，区分知识摄入层次</li>
-                <li>推荐组合：<br>
-                    <span class="book">《倦怠社会》</span><br>
-                    <span class="movie">《黑镜》S3E1</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="screen">
-            <i class="icon fas fa-dna"></i>
-            <h2>进化时差</h2>
-            <ul>
-                <li>行动指南：通过原始运动（攀爬/投掷）重建身心连接</li>
-                <li>推荐组合：<br>
-                    <span class="book">《贪婪的多巴胺》</span><br>
-                    <span class="movie">《人类进化史诗》</span>
-                </li>
-            </ul>
-        </div>
+        <h1 style="color: #fff;">焦虑解码手册</h1>
+        <h2 style="color: #ecf0f1;">6个维度破解现代焦虑迷局</h2>
     </div>
 
-    <div class="progress">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+    <!-- 分屏内容 -->
+    <div class="screen" style="background: hsl(220, 30%, 95%);">
+        <div class="progress">1/6</div>
+        <div class="icon-box" style="background: hsl(220, 50%, 60%);">
+            <i class="fas fa-question fa-2x" style="color: #fff;"></i>
+        </div>
+        <h3>不确定性恐惧</h3>
+        <div class="note">
+            <p>行动指南：建立「概率思维」- 用百分比量化风险（例：80%担心的事不会发生），建立应急预案清单</p>
+        </div>
+        <p>📚《反脆弱》× 🎥《蝴蝶效应》</p>
     </div>
 
-    <script>
-        // 进度指示器动态更新
-        const container = document.querySelector('.container');
-        const dots = document.querySelectorAll('.dot');
+    <div class="screen" style="background: hsl(220, 30%, 90%);">
+        <div class="progress">2/6</div>
+        <div class="icon-box" style="background: hsl(220, 50%, 55%);">
+            <i class="fas fa-cogs fa-2x" style="color: #fff;"></i>
+        </div>
+        <h3>控制错觉</h3>
+        <div class="note">
+            <p>行动指南：区分「影响圈」与「关注圈」，每天记录3件可掌控的小事（例：作息时间、学习进度）</p>
+        </div>
+        <p>📚《当下的力量》× 🎥《心灵奇旅》</p>
+    </div>
 
-        container.addEventListener('scroll', () => {
-            const screenIndex = Math.round(container.scrollLeft / window.innerWidth);
-            dots.forEach((dot, index) => {
-                dot.style.background = index === screenIndex ? '#5c6ac4' : 'rgba(100,100,200,0.3)';
-            });
-        });
-    </script>
+    <div class="screen" style="background: hsl(220, 30%, 85%);">
+        <div class="progress">3/6</div>
+        <div class="icon-box" style="background: hsl(220, 50%, 50%);">
+            <i class="fas fa-dna fa-2x" style="color: #fff;"></i>
+        </div>
+        <h3>进化错位</h3>
+        <div class="note">
+            <p>行动指南：理解「杏仁核劫持」原理，当焦虑时自问：这个威胁对我的原始祖先意味着什么？</p>
+        </div>
+        <p>📚《进化心理学》× 🎥《人类进化史诗》</p>
+    </div>
+
+    <div class="screen" style="background: hsl(220, 30%, 80%);">
+        <div class="progress">4/6</div>
+        <div class="icon-box" style="background: hsl(220, 50%, 45%);">
+            <i class="fas fa-comments fa-2x" style="color: #fff;"></i>
+        </div>
+        <h3>认知过载</h3>
+        <div class="note">
+            <p>行动指南：建立「数字斋戒」时间，使用「二八法则」筛选信息源（保留20%关键信息源）</p>
+        </div>
+        <p>📚《深度工作》× 🎥《社交困境》</p>
+    </div>
+
+    <div class="screen" style="background: hsl(220, 30%, 75%);">
+        <div class="progress">5/6</div>
+        <div class="icon-box" style="background: hsl(220, 50%, 40%);">
+            <i class="fas fa-hourglass-half fa-2x" style="color: #fff;"></i>
+        </div>
+        <h3>时间感知扭曲</h3>
+        <div class="note">
+            <p>行动指南：实践「时间块管理法」，用物理沙漏具象化时间流逝（推荐25分钟沙漏）</p>
+        </div>
+        <p>📚《时间的秩序》× 🎥《时间规划局》</p>
+    </div>
+
+    <div class="screen" style="background: hsl(220, 30%, 70%);">
+        <div class="progress">6/6</div>
+        <div class="icon-box" style="background: hsl(220, 50%, 35%);">
+            <i class="fas fa-infinity fa-2x" style="color: #fff;"></i>
+        </div>
+        <h3>存在性焦虑</h3>
+        <div class="note">
+            <p>行动指南：建立「意义档案」- 收集日常中的心流时刻，定期制作个人意义地图</p>
+        </div>
+        <p>📚《活出生命的意义》× 🎥《超脱》</p>
+    </div>
 </body>
 </html>
