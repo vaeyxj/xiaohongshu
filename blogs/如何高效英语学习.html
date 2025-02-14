@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<style>
+:root {
+  --mobile-width: 390px;
+  --screen-height: 844px;
+}
+body {
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: #f0f4ff;
+}
+.screen {
+  scroll-snap-align: start;
+  min-width: var(--mobile-width);
+  width: 100vw;
+  height: var(--screen-height);
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+.progress-ring {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background:
+    conic-gradient(#2563eb calc(var(--progress)*1%), #bfdbfe 0),
+    linear-gradient(white, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-family: system-ui;
+  color: #2563eb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.progress-ring::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: white;
+  border-radius: 50%;
+}
+.progress-ring span {
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+}
+.content-box {
+  height: calc(100% - 60px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  overflow-y: auto;
+}
+.card {
+  background: rgba(255,255,255,0.98);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+}
+.real-case {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+.real-case::before {
+  content: "🌟 真人实证";
+  display: block;
+  font-size: 14px;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+.method {
+  border-left: 3px solid #60a5fa;
+  padding-left: 12px;
+  margin: 16px 0;
+}
+.tool {
+  background: #dbeafe;
+  padding: 16px;
+  border-radius: 12px;
+}
+.cover {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+.cover-title {
+  font-size: min(8vw, 36px);
+  color: #fff;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+.cover-subtitle {
+  color: #bfdbfe;
+  font-size: min(4.5vw, 17px);
+}
+.screen:nth-child(2) { background: #eff6ff; }
+.screen:nth-child(3) { background: #dbeafe; }
+.screen:nth-child(4) { background: #bfdbfe; }
+.screen:nth-child(5) { background: #93c5fd; }
+.screen:nth-child(6) { background: #60a5fa; }
+</style>
+</head>
+<body>
+
+<!-- 封面屏 -->
+<div class="screen cover">
+  <div class="progress-ring" style="--progress:0"><span>1/5</span></div>
+  <h1 class="cover-title">英语跃迁指南</h1>
+  <p class="cover-subtitle">5大核心策略×科学方法×实战工具</p>
+</div>
+
+<!-- 策略1 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:20"><span>2/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>可理解输入法</h2>
+
+      <div class="real-case">
+        <p>1. 程序员张伟通过《老友记》双语字幕学习，6个月突破听力瓶颈</p>
+        <p>2. 雅思8分王楠每天精读《经济学人》1篇文章坚持2年</p>
+      </div>
+
+      <div class="method">
+        <strong>📚 i+1理论：</strong>
+        <p>选择比当前水平稍难的材料<br>
+        <small>理想难度 = 现有水平 + 10%新内容</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《把你的英语用起来》ISBN 9787513573446<br>
+        🎬《阿甘正传》IMDb:tt0109830<br>
+        🔧 工具：Language Reactor插件</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 策略2 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:40"><span>3/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>高频词库构建</h2>
+
+      <div class="real-case">
+        <p>1. 留学生李婷用COCA语料库筛选高频词，3个月词汇量破万</p>
+        <p>2. 外贸经理陈浩专注行业术语，谈判效率提升3倍</p>
+      </div>
+
+      <div class="method">
+        <strong>🧠 艾宾浩斯记忆法：</strong>
+        <p>5分钟→30分钟→12小时→1天→3天→7天<br>
+        <small>遗忘临界点精准复习</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《Word Power Made Easy》ISBN 9781101873854<br>
+        🎬《国王的演讲》IMDb:tt1504320<br>
+        🔧 工具：Anki自定义记忆库</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 策略3 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:60"><span>4/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>肌肉记忆训练</h2>
+
+      <div class="real-case">
+        <p>1. 同传译员刘薇每天影子跟读2小时，语速提升50%</p>
+        <p>2. 大学生王磊用「回音法」纠正发音，雅思口语7.5分</p>
+      </div>
+
+      <div class="method">
+        <strong>🎯 刻意练习三要素：</strong>
+        <p>明确目标 → 即时反馈 → 突破舒适区<br>
+        <small>每次训练聚焦1个薄弱点</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《Fluent Forever》ISBN 9780385348119<br>
+        🎬《窈窕淑女》IMDb:tt0058385<br>
+        🔧 工具：ELSA Speak发音矫正</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 策略4 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:80"><span>5/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>场景化输出</h2>
+
+      <div class="real-case">
+        <p>1. 产品经理赵敏在italki找外教模拟路演，拿下国际订单</p>
+        <p>2. 中学生周舟通过英语日记写作，SAT写作满分</p>
+      </div>
+
+      <div class="method">
+        <strong>💡 输出驱动假设：</strong>
+        <p>以用促学 → 以缺定学 → 以评促学<br>
+        <small>每周至少3次实战应用</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《英语本质论》ISBN 9787544657986<br>
+        🎬《实习生》IMDb:tt2361509<br>
+        🔧 平台：Cambly实时对话</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

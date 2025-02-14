@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成功人士的10个核心品质</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 保留原有样式基础上新增动态效果 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            height: 100vh;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screen {
+            width: 100vw;
+            min-width: 100vw;
+            height: 100vh;
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            padding: 20px;
+            position: relative;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            transition: background 0.5s;
+        }
+
+        .progress-ring {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: iconEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes iconEntrance {
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .content {
+            background: rgba(255,255,255,0.9);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 15px 0;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: contentEntrance 0.6s 0.2s forwards;
+        }
+
+        @keyframes contentEntrance {
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* 新增分屏背景色序列 */
+        .screen:nth-child(1) { background: #2d3436; color: white; }
+        .screen:nth-child(2) { background: #ffeaa7; }
+        .screen:nth-child(3) { background: #a8d8ea; }
+        .screen:nth-child(4) { background: #ffaaa5; }
+        .screen:nth-child(5) { background: #55efc4; }
+        .screen:nth-child(6) { background: #a593e0; }
+        .screen:nth-child(7) { background: #ffda79; }
+        .screen:nth-child(8) { background: #87dfd6; }
+        .screen:nth-child(9) { background: #f7a8b8; }
+        .screen:nth-child(10) { background: #6c5ce7; color: white; }
+        .screen:nth-child(11) { background: #00b894; color: white; }
+
+        /* 进度环动态计算 */
+        .progress-ring circle {
+            transition: stroke-dashoffset 0.5s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 封面 -->
+    <div class="screen" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">🌟成功人士的<br>10个核心品质</h1>
+        <p style="text-align: center; opacity: 0.8;">向左滑动开启认知升级</p>
+        <div style="position: absolute; bottom: 30px; font-size: 0.9rem;">@认知突破研究所</div>
+    </div>
+
+    <!-- 品质1：目标管理 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="254.469"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" fill="#2d3436" font-size="20">1/10</text>
+        </svg>
+        <div class="icon-box" style="background: #ff7675;">
+            <i class="fas fa-bullseye"></i>
+        </div>
+        <div class="content">
+            <h2>目标精确制导</h2>
+            <p>像GPS导航系统需要精确坐标，成功者会将"财务自由"这种模糊概念转化为"5年储蓄200万"的具体指标。巴菲特10岁就明确要成为百万富翁</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：目标具象化+逆向工程法</p>
+            <div class="book-tip">
+                <strong>行动工具：</strong>《OKR工作法》克里斯蒂娜·沃特克著<br>
+                <a href="https://www.example.com/okr" style="color: #0984e3;">→ 目标分解模板</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质2：抗压能力 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="226.195"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">2/10</text>
+        </svg>
+        <div class="icon-box" style="background: #fdcb6e;">
+            <i class="fas fa-anchor"></i>
+        </div>
+        <div class="content">
+            <h2>压力淬炼机制</h2>
+            <p>顶尖运动员在比赛前会制造训练压力：羽生结弦在冰场播放观众噪音进行训练，模拟真实比赛环境</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：抗压力=压力暴露+恢复弹性</p>
+            <div class="book-tip">
+                <strong>心理建设：</strong>《逆商》CORE四维度测评法<br>
+                <a href="https://www.example.com/core-test" style="color: #0984e3;">→ 抗压能力自测表</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质3：决策系统 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="197.92"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">3/10</text>
+        </svg>
+        <div class="icon-box" style="background: #00b894;">
+            <i class="fas fa-chess-queen"></i>
+        </div>
+        <div class="content">
+            <h2>决策算法升级</h2>
+            <p>桥水基金创始人达利欧用「原则清单」处理决策：当员工流失率超过15%时自动触发管理机制调整</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：建立if-then决策树（决策自动化）</p>
+            <div class="book-tip">
+                <strong>决策工具：</strong>《原则》+决策日志模板<br>
+                <a href="https://www.example.com/decision-tree" style="color: #0984e3;">→ 下载决策矩阵表</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质4：精力管理 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="169.646"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">4/10</text>
+        </svg>
+        <div class="icon-box" style="background: #a593e0; color: white;">
+            <i class="fas fa-battery-full"></i>
+        </div>
+        <div class="content">
+            <h2>能量充放电策略</h2>
+            <p>扎克伯格每天穿相同灰T恤，奥巴马只做三件套决策，本质是减少意志力损耗。就像手机开启省电模式，把精力聚焦关键事务</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：帕累托精力分配（80%能量用于20%核心事务）</p>
+            <div class="book-tip">
+                <strong>时间管理：</strong>《每天最重要的2小时》神经科学策略<br>
+                <a href="https://www.example.com/energy-cycle" style="color: #0984e3;">→ 精力波动测试工具</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质5：风险意识 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="141.372"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">5/10</text>
+        </svg>
+        <div class="icon-box" style="background: #ff7675;">
+            <i class="fas fa-radar"></i>
+        </div>
+        <div class="content">
+            <h2>风险雷达系统</h2>
+            <p>索罗斯做空英镑时设置5%止损线，亚马逊AWS业务初期采用"双披萨原则"（团队不超过两个披萨能吃饱的人数）控制试错成本</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：墨菲定律预防机制+反脆弱架构</p>
+            <div class="book-tip">
+                <strong>风控模型：</strong>《黑天鹅》作者塔勒布的三元风险矩阵<br>
+                <a href="https://www.example.com/risk-matrix" style="color: #0984e3;">→ 风险概率影响图</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质6：模式识别 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="113.097"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">6/10</text>
+        </svg>
+        <div class="icon-box" style="background: #00cec9;">
+            <i class="fas fa-puzzle-piece"></i>
+        </div>
+        <div class="content">
+            <h2>认知模式拼图</h2>
+            <p>马斯克将汽车制造经验迁移到火箭研发，发现两者都有"降低次品率"的核心问题，这种跨领域类比能力是模式识别的典型表现</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：跨学科思维模型（Lollapalooza效应）</p>
+            <div class="book-tip">
+                <strong>思维工具：</strong>《穷查理宝典》100个思维模型清单<br>
+                <a href="https://www.example.com/mental-models" style="color: #0984e3;">→ 思维模型库</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质7：延迟满足 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="84.823"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">7/10</text>
+        </svg>
+        <div class="icon-box" style="background: #fdcb6e;">
+            <i class="fas fa-hourglass-half"></i>
+        </div>
+        <div class="content">
+            <h2>时间贴现控制</h2>
+            <p>诺贝尔奖得主丹尼尔·卡尼曼的"冷热系统"理论：训练自己像巴菲特持有可口可乐股票34年那样对待重要目标</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：双曲贴现对抗（Hyperbolic Discounting）</p>
+            <div class="book-tip">
+                <strong>训练方法：</strong>棉花糖实验升级版-承诺机制<br>
+                <a href="https://www.example.com/delay-test" style="color: #0984e3;">→ 延迟满足指数测试</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质8：人脉复利 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="56.549"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">8/10</text>
+        </svg>
+        <div class="icon-box" style="background: #6c5ce7; color: white;">
+            <i class="fas fa-project-diagram"></i>
+        </div>
+        <div class="content">
+            <h2>社交网络复利</h2>
+            <p>LinkedIn创始人霍夫曼的"人脉投资法"：每月固定与3位不同领域专家深度交流，保持弱连接的多样化</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：邓巴数优化（维持150人的有效社交圈）</p>
+            <div class="book-tip">
+                <strong>关系管理：</strong>《给予者》三大人脉类型分类法<br>
+                <a href="https://www.example.com/social-capital" style="color: #0984e3;">→ 人脉价值评估工具</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质9：元认知 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="28.274"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">9/10</text>
+        </svg>
+        <div class="icon-box" style="background: #00b894;">
+            <i class="fas fa-brain"></i>
+        </div>
+        <div class="content">
+            <h2>思维后台监控</h2>
+            <p>桥水基金采用"痛苦按钮"系统：当员工遇到挫折时实时记录情绪数据，通过机器学习分析思维盲区</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：认知双重加工理论（系统1与系统2）</p>
+            <div class="book-tip">
+                <strong>提升工具：</strong>《元认知》六步训练法+思维记录表<br>
+                <a href="https://www.example.com/metacognition" style="color: #0984e3;">→ 思维偏差自检清单</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品质10：反脆弱 -->
+    <div class="screen">
+        <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="282.743" stroke-dashoffset="0"/>
+            <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">10/10</text>
+        </svg>
+        <div class="icon-box" style="background: #d63031; color: white;">
+            <i class="fas fa-phoenix-framework"></i>
+        </div>
+        <div class="content">
+            <h2>反脆弱结构</h2>
+            <p>任正非的"备胎计划"：海思芯片在禁令前已研发15年，将外部冲击转化为发展契机，符合塔勒布提出的"杠铃策略"</p>
+            <p style="color: #2d3436; font-weight: 500;">本质：凸性响应（Convexity Response）</p>
+            <div class="book-tip">
+                <strong>构建方法：</strong>《反脆弱》三步构建法+压力测试方案<br>
+                <a href="https://www.example.com/antifragile" style="color: #0984e3;">→ 系统脆弱性评估表</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾屏 -->
+    <div class="screen" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div class="icon-box" style="background: rgba(255,255,255,0.2);">
+            <i class="fas fa-medal" style="color: white;"></i>
+        </div>
+        <h2 style="color: white; margin: 20px 0;">持续进化才是终极品质</h2>
+        <p style="text-align: center; opacity: 0.9;">关注获取完整成长地图</p>
+        <div style="position: absolute; bottom: 30px; font-size: 0.9rem;">@认知突破研究所</div>
+    </div>
+</body>
+</html>

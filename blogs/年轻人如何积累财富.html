@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<style>
+:root {
+  --mobile-width: 390px;
+  --screen-height: 844px;
+}
+body {
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: #f5f3ff;
+}
+.screen {
+  scroll-snap-align: start;
+  min-width: var(--mobile-width);
+  width: 100vw;
+  height: var(--screen-height);
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+.progress-ring {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background:
+    conic-gradient(#4f46e5 calc(var(--progress)*1%), #e0e7ff 0),
+    linear-gradient(white, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-family: system-ui;
+  color: #4f46e5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.progress-ring::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: white;
+  border-radius: 50%;
+}
+.progress-ring span {
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+}
+.content-box {
+  height: calc(100% - 60px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  overflow-y: auto;
+}
+.card {
+  background: rgba(255,255,255,0.98);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+}
+.real-case {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+.real-case::before {
+  content: "💰 财富实证";
+  display: block;
+  font-size: 14px;
+  color: #6366f1;
+  margin-bottom: 8px;
+}
+.method {
+  border-left: 3px solid #818cf8;
+  padding-left: 12px;
+  margin: 16px 0;
+}
+.tool {
+  background: #eef2ff;
+  padding: 16px;
+  border-radius: 12px;
+}
+.cover {
+  background: linear-gradient(135deg, #3730a3, #6366f1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+.cover-title {
+  font-size: min(8vw, 36px);
+  color: #fff;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+.cover-subtitle {
+  color: #c7d2fe;
+  font-size: min(4.5vw, 17px);
+}
+.screen:nth-child(2) { background: #eef2ff; }
+.screen:nth-child(3) { background: #e0e7ff; }
+.screen:nth-child(4) { background: #c7d2fe; }
+.screen:nth-child(5) { background: #a5b4fc; }
+.screen:nth-child(6) { background: #818cf8; }
+</style>
+</head>
+<body>
+
+<!-- 封面屏 -->
+<div class="screen cover">
+  <div class="progress-ring" style="--progress:0"><span>1/5</span></div>
+  <h1 class="cover-title">新世代财富蓝图</h1>
+  <p class="cover-subtitle">5大引擎构建财务自由系统</p>
+</div>
+
+<!-- 策略1 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:20"><span>2/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>收入拓扑升级</h2>
+
+      <div class="real-case">
+        <p>1. 程序员李涛开发自动化工具，副业收入超主业3倍</p>
+        <p>2. 设计师薇薇签约NFT平台，单作品售出50ETH</p>
+      </div>
+
+      <div class="method">
+        <strong>📊 现金流四象限：</strong>
+        <p>E(雇员)→S(自雇)→B(企业主)→I(投资者)<br>
+        <small>重点突破B象限资产</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《富爸爸穷爸爸》ISBN 9787508612065<br>
+        🎬《成为沃伦·巴菲特》IMDb:tt7801770<br>
+        🔧 工具：Notion收入仪表盘</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 策略2 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:40"><span>3/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>复利加速器</h2>
+
+      <div class="real-case">
+        <p>1. 大学生张明每月定投指数基金，7年资产破百万</p>
+        <p>2. 博主周舟创作体系课程，边际成本趋近于零</p>
+      </div>
+
+      <div class="method">
+        <strong>📈 72法则：</strong>
+        <p>本金翻倍时间 = 72 ÷ 年化收益率<br>
+        <small>15%收益率 → 4.8年翻倍</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《指数基金投资指南》ISBN 9787508680231<br>
+        🎬《大空头》IMDb:tt1596363<br>
+        🔧 工具：雪球组合分析</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 策略3 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:60"><span>4/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>杠铃策略</h2>
+
+      <div class="real-case">
+        <p>1. 产品经理王浩配置90%指数基金+10%加密货币</p>
+        <p>2. 留学生Lisa用期权对冲美股持仓风险</p>
+      </div>
+
+      <div class="method">
+        <strong>⚖️ 风险不对称性：</strong>
+        <p>有限损失 vs 无限收益<br>
+        <small>避免中等风险陷阱</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《反脆弱》ISBN 9787508642932<br>
+        🎬《华尔街之狼》IMDb:tt0993846<br>
+        🔧 策略：尾部风险对冲方案</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 策略4 -->
+<div class="screen">
+  <div class="progress-ring" style="--progress:80"><span>5/5</span></div>
+  <div class="content-box">
+    <div class="card">
+      <h2>数字杠杆系统</h2>
+
+      <div class="real-case">
+        <p>1. 程序员开发Chrome插件，年被动收入$120k</p>
+        <p>2. 留学生运营AI工具导航站，月广告收入¥50k+</p>
+      </div>
+
+      <div class="method">
+        <strong>🚀 边际成本趋零：</strong>
+        <p>数字产品研发成本固定<br>
+        <small>每新增用户成本≈0</small></p>
+      </div>
+
+      <div class="tool">
+        <p>📖《纳瓦尔宝典》ISBN 9787521743752<br>
+        🎬《社交网络》IMDb:tt1285016<br>
+        🔧 平台：Gumroad数字销售</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
