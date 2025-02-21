@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+  --gradient1: linear-gradient(45deg, #FF6B6B 0%, #FF8E53 100%);
+  --gradient2: linear-gradient(135deg, #6C5B7B 0%, #C06C84 100%);
+  --gradient3: linear-gradient(160deg, #4B79A1 0%, #A88BEB 100%);
+}
+
+body {
+  margin: 0;
+  font-family: 'PingFang SC', system-ui;
+  overflow-x: hidden;
+}
+
+/* 沉浸式分屏 */
+.screen {
+  min-height: 100vh;
+  padding: 15% 8%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+}
+
+/* 动态文字容器 */
+.card {
+  width: 55%;
+  padding: 40px;
+  background: rgba(255,255,255,0.93);
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transform: scale(0.95);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+  transform: scale(1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* 2025流行视觉元素 */
+.neon-text {
+  background: var(--gradient1);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3.2em;
+  line-height: 1.2;
+  margin: 25px 0;
+  text-shadow: 0 4px 10px rgba(255,107,107,0.3);
+}
+
+.bubble-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bubble-list li {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-size: 1.4em;
+}
+
+/* 动态分隔线 */
+.divider {
+  height: 3px;
+  width: 80px;
+  margin: 30px 0;
+  background: var(--gradient1);
+  transform: scaleX(0);
+  transition: transform 1.2s ease;
+}
+
+.card:hover .divider {
+  transform: scaleX(1);
+}
+</style>
+</head>
+<body>
+
+<!-- 第一屏：痛点直击 -->
+<section class="screen" style="background: var(--gradient1)">
+  <div class="card">
+    <h1 class="neon-text">💥焦虑生存报告💥</h1>
+    <div class="divider"></div>
+    <ul class="bubble-list">
+      <li>💔 心跳120却查不出原因</li>
+      <li>🌪️ 深夜头脑风暴停不下来</li>
+      <li>🔮 总预感有坏事发生</li>
+    </ul>
+    <p style="font-size:1.6em;color:#666">▼ 其实都是大脑的「防御演习」</p>
+  </div>
+</section>
+
+<!-- 第二屏：本质拆解 -->
+<section class="screen" style="background: var(--gradient2)">
+  <div class="card" style="margin-left:auto">
+    <h1 class="neon-text" style="background-image:var(--gradient2)">🧠焦虑运作原理</h1>
+    <div class="divider"></div>
+    <p style="font-size:1.8em;line-height:1.6">
+      <strong style="background:var(--gradient2);-webkit-background-clip:text;color:transparent">⚠️ 误报系统：</strong><br>
+      把「可能」当「必然」<br>
+      把「困难」当「灾难」<br>
+      把「过去」当「未来」
+    </p>
+  </div>
+</section>
+
+<!-- 第三屏：解决方案 -->
+<section class="screen" style="background: var(--gradient3)">
+  <div class="card">
+    <h1 class="neon-text" style="background-image:var(--gradient3)">✨自救指南✨</h1>
+    <div class="divider"></div>
+    <p style="font-size:1.6em;line-height:1.8">
+      🔑 认知重启三步曲：<br><br>
+      1️⃣ <strong>识别假警报</strong>：「这个想法有多少真实证据？」<br>
+      2️⃣ <strong>建立缓冲区</strong>：「最坏情况发生的概率实际有多少？」<br>
+      3️⃣ <strong>重塑认知</strong>：「如果发生在朋友身上，我会怎么劝TA？」
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
